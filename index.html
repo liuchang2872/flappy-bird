@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	
+
+
+
+
+
+	<head>
+
+	<meta charset="UTF-8">
+	<title>flappy bird</title>
+	<script src = "js/phaser.js"></script>
+
+
+	<script src ="js/loader.js"></script>
+	<script src ="js/boot.js"></script>
+
+	</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<body>
+		<div id="container"></div>
+		  <script >
+
+			
+			// new Phaser.Game(widthm height, renderer, parent, state, transparent, antialias, physicsConfig)
+
+			var game = new Phaser.Game(320, 505, Phaser.AUTO, 'container');
+
+			game.state.add('boot',bootState);
+			game.state.add('loader', loaderState);
+			game.state.start('boot');
+
+
+			// function state()   //场景对象的函数形式
+			// {
+			// 	
+
+			// this.init = function(){
+
+			// 	};  //init
+				
+
+
+			// 	this.preload = function(){
+			// 		game.load.image('bird','assets/bird.png');
+			// 		game.load.image('flappy_bg','assets/flappy_bg.png');
+			// 		game.load.onFileComplete.add(function(){console.log(game.load.progress);
+			// 		});
+
+			// 	};  //load resource
+
+			// 	this.create = function(){
+
+			// 	};   //create state
+
+			// 	this.update = function(){
+
+			// 	};  // every flip 
+
+			// 	this.render = function(){
+
+			// 	};  
+			// }
+
+			//   game.state.add("state",state);
+			//  game.state.start("state");
+
+
+			// //game.load 对象
+			// //game.onFileComplete  单个资源加载完成事件
+			// //game.onLoadComplete  所有资源加载完成事件
+			// //game.load.progress 资源加载进度
+
+
+
+		</script>
+	</body>
+</html>
